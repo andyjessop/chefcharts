@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import BaseLayout from "./base-layout.astro";
 import { SheetMobileNav } from "@/components/layout/sheet-mobile-nav";
 import { navMenuConfig } from "@/config/nav-menu";
+import Icon from "astro-icon";
 // import { marketingConfig } from "@/config/marketing";
 // import MainNav from "@/components/layout/main-nav.astro";
 
@@ -42,6 +43,13 @@ const { title, description, mainClass } = Astro.props;
     />
 
     <nav slot="right-header">
+      <a
+        href="https://twitter.com/AndyJessop33500"
+        class={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+        target="_blank"
+      >
+        Follow along on <Icon name="twitter" class="ml-2 size-4" />
+      </a>
       <a
         href="/login"
         class={cn(buttonVariants({ variant: "outline", size: "sm" }), "px-4")}
